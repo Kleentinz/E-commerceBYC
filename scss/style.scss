@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lato:wght@300;400&family=Manrope:wght@400;500;800&display=swap');
+
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: black;
+    margin: 0;
+    font-family: Jost !important;
+
+}
+@mixin breakpoint($point) {
+    @if $point == mobile {
+      @media (max-width: 767px) {
+        @content;
+      }
+    }
+    @else if $point == tablet {
+      @media (min-width: 768px) and (max-width: 1022px) {
+        @content;
+      }
+    }
+    @else if $point == desktop {
+      @media (min-width: 1023px) {
+        @content;
+      }
+    }
+  }
+
+// nav styling
+.largeNav{
+    @include breakpoint(mobile){
+        display: none;
+    }
+    @include breakpoint(tablet){
+        display: none;
+    }
+}
+
+.smallNav{
+    @include breakpoint(desktop){
+        display: none;
+    }
+}
+
+// Nav Styling End
+
+// HomePage
+
+// first section Styling Starts
+
+
+
+.secContent{
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    button{
+        span{
+            font-family: "Jost-Bold", Helvetica;
+            font-weight: 700;
+            font-size: 18.6px;
+        }
+    
+    
+    }
+
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+
+    h1{
+    font-family: "Jost-Bold", Helvetica;
+    font-weight: 700;
+    color: #212121;
+    font-size: 52.4px;
+    margin: 40px 0;
+    }
+
+    p{
+        font-family: "Jost-Regular", Helvetica;
+        font-weight: 400;
+        color: #333333;
+        font-size: 25px;
+    }
+    .btnSec1{
+        background: none;
+        outline: none;
+        border: 2px solid;
+        padding: 10px 50px;
+        color: black
+        
+        
+    }
+}
+
+.sec1Img{
+        margin-top: 50px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @include breakpoint(mobile){
+            img{
+                width: 100%;
+                
+            }
+            .modelImg1, .modelImg2{
+                margin: 20px;
+                display: inline !important;
+            }
+            
+        }  
+}
+
+.modelImg{
+    margin-top: 120px;
+}
+// First Section Styling Ends
+
+// Section Two
+
+.sectwo{
+    h4{
+        font-family: "Jost-Bold", Helvetica;
+        font-weight: 700;
+        color: #212121;
+        font-size: 33.3px;
+        text-align: center;
+        margin: 50px 50px;
+    }
+}
+
+.imgSectwo{
+    
+    h5{
+        font-family: "Jost-SemiBold", Helvetica;
+        font-weight: 600;
+        color: #212121;
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    p{
+        font-family: "Jost-Regular", Helvetica;
+        font-weight: 400;
+        color: #212121;
+        font-size: 13px;
+    }
+
+ 
+
+
+}
+
+.viewAllBtn{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 70px 0;
+    
+    button{
+        background: none;
+        outline: none;
+        border: 2px solid;
+        padding: 10px 80px;
+        color: black
+    }
+     
+}
+
+// Section Two End
+
+// Section Three
+
+.contentSec{
+   padding: 125px 120px;
+    background-color: #f1f1f1;
+
+    h5{
+        color: var(--gray-800, #616161);
+        font-family: Jost;
+        font-size: 33.52px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; 
+    }
+
+    p{
+        color: var(--gray-900, #424242);
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+}
+#byc-collection{
+    color: var(--gray-1000, #212121);
+    font-family: Jost;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.exploreBtn{
+    
+    margin: 50px 0;
+    
+    button{
+        background: none;
+        outline: none;
+        border: 2px solid;
+        padding: 10px 60px;
+        color: black
+    }
+     
+}
+
+// Section Three End
+
+
+// Content before card section 
+
+.catSection{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   h3{
+    color: var(--gray-1000, #212121);
+    font-family: Jost;
+    font-size: 39px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 40px;
+   }
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       
+  
+       a{
+        text-decoration: none;
+        color: black;
+        color: var(--Gray-1, #333);
+        font-family: Jost;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+       }
+    }
+}
+
+// card section
+
+.cardContent{
+    p{
+        color: gray;
+        font-family: Segoe UI;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 20px 0 5px;
+    }
+}
+
+#womenPants{
+    font-weight: 700;
+    color: black;
+}
+// Home Page End
+
