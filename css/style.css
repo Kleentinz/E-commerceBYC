@@ -83,6 +83,9 @@ body {
 }
 
 @media (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
   br {
     display: none;
   }
@@ -175,6 +178,17 @@ body {
   color: black;
 }
 
+@media (max-width: 767px) {
+  * {
+    box-sizing: border-box;
+  }
+  br {
+    display: none;
+  }
+  .contentSec, .threebIMG {
+    margin-bottom: 10px;
+  }
+}
 .hover1 a:hover {
   list-style: lower-roman;
 }

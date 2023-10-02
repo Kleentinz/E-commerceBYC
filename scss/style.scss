@@ -125,6 +125,12 @@ body{
 // Media 
 
 @include breakpoint(mobile){
+
+    * {
+        box-sizing: border-box;
+        
+      }
+
     br{
         display: none;
     }
@@ -249,6 +255,21 @@ body{
      
 }
 
+@include breakpoint(mobile){
+
+    * {
+        box-sizing: border-box;
+        
+      }
+      
+    br{
+        display: none;
+    }
+
+  .contentSec, .threebIMG{
+    margin-bottom: 10px;
+  }
+}
 // Section Three End
 
 
