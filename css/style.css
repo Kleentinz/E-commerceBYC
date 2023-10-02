@@ -82,6 +82,20 @@ body {
   margin-top: 120px;
 }
 
+@media (max-width: 767px) {
+  br {
+    display: none;
+  }
+  .sec1Img {
+    margin: 0;
+    width: 100%;
+    display: block;
+  }
+  .modelImg2 {
+    justify-items: center;
+    margin: 0 auto;
+  }
+}
 .sectwo h4 {
   font-family: "Jost-Bold", Helvetica;
   font-weight: 700;
@@ -110,6 +124,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 70px 0;
+  font-weight: bold;
 }
 .viewAllBtn button {
   background: none;
@@ -160,6 +175,23 @@ body {
   color: black;
 }
 
+.hover1 a:hover {
+  list-style: lower-roman;
+}
+
+.hover2 {
+  margin-top: 40px;
+}
+.hover2 a {
+  border: 2px gainsboro solid;
+  padding: 10px;
+}
+.hover2 a:hover {
+  background-color: red;
+  color: white;
+  padding: 15px;
+}
+
 .catSection {
   justify-content: center;
   align-items: center;
@@ -205,6 +237,78 @@ body {
 #womenPants {
   font-weight: 700;
   color: black;
+}
+
+.blogNews h5 {
+  color: #212121;
+  font-family: Jost;
+  font-size: 33.52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.newsSection {
+  padding: 40px;
+  width: fit-content;
+}
+.newsSection img {
+  margin: 20px 0;
+}
+.newsSection p {
+  color: var(--gray-900, #424242);
+  font-family: Jost;
+  font-size: 13.701px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.newsSection p span {
+  font-weight: 400;
+  margin-left: 20px;
+}
+.newsSection h6 {
+  color: var(--gray-1000, #212121);
+  font-family: Jost;
+  font-size: 26.545px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 35px 0;
+}
+.newsSection #innerContent {
+  color: var(--gray-900, #424242);
+  font-family: Lato;
+  font-size: 13.701px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.readMoreBtn {
+  margin-top: 40px;
+  padding-bottom: 80px;
+  font-size: 13.701px;
+  font-style: normal;
+  font-weight: 7000;
+  line-height: normal button;
+  line-height-outline: none;
+  line-height-border: 2px solid;
+}
+
+#btnStyle {
+  color: var(--gray-900, #424242);
+  font-family: Jost;
+  font-size: 13.701px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 2px 10px;
+}
+#btnStyle img {
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
