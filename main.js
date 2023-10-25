@@ -11,4 +11,4 @@ function rotateWord() {
 
 // Call rotateWord initially and set an interval to call it repeatedly
 rotateWord();
-setInterval(rotateWord, 2000); // Change word every 2 seconds (adjust as needed)
+setInterval(rotateWord, 3000); // Change word every 2 seconds (adjust as needed)

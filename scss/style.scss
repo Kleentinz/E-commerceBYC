@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Lato:wght@300;400&family=Manrope:wght@400;500;800&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&family=Josefin+Sans:wght@400;500&family=Jost:wght@300;400;500;600;700&family=Lato:wght@300;400&family=Manrope:wght@400;500;800&display=swap');
+.row{
+    margin: 0 !important;
+}
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
 body{
-    background-color: black;
     margin: 0;
     font-family: Jost !important;
 
 }
+
+
 @mixin breakpoint($point) {
     @if $point == mobile {
       @media (max-width: 767px) {
@@ -18,16 +22,17 @@ body{
       }
     }
     @else if $point == tablet {
-      @media (min-width: 768px) and (max-width: 1022px) {
+      @media (min-width: 768px) and (max-width: 1023px) {
         @content;
       }
     }
     @else if $point == desktop {
-      @media (min-width: 1023px) {
+      @media (min-width: 1024px) {
         @content;
       }
     }
   }
+  
 
 // nav styling
 .largeNav{
@@ -47,17 +52,45 @@ body{
 
 // Nav Styling End
 
+// View all Button
+
+.view-all-btn{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 70px 0;
+    font-weight: bold;
+    color: #212121;
+    text-align: center;
+    font-family: Jost !important;
+    font-size: 17.19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+    button{
+        background: none;
+        outline: none;
+        border: 2px solid;
+        padding: 10px 80px;
+        color: black
+    
+    }
+     
+}
+
+
 // HomePage
 
-// first section Styling Starts
-
-
+// first section Styling Starts-------------------------------------------------------------------------------------------------------------
 
 .secContent{
     margin-top: 50px;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+  
 
     button{
         span{
@@ -88,7 +121,7 @@ body{
         color: #333333;
         font-size: 25px;
     }
-    .btnSec1{
+    .shop-now-btn, .learn-more-btn{
         background: none;
         outline: none;
         border: 2px solid;
@@ -99,287 +132,322 @@ body{
     }
 }
 
-.sec1Img{
+.shop-now-btn{
+    margin-right: 10px;
+}
+
+.image-section-trio{
         margin-top: 50px;
         justify-content: center;
         align-items: center;
         text-align: center;
-
-        @include breakpoint(mobile){
-            img{
-                width: 100%;
-                
-            }
-            .modelImg1, .modelImg2{
-                margin: 20px;
-                display: inline !important;
-            }
-            
-        }  
 }
 
-.modelImg{
+.maleModel{
     margin-top: 120px;
 }
 
-// Media 
-
 @include breakpoint(mobile){
-
-    * {
-        box-sizing: border-box;
-        
-      }
-
-    br{
-        display: none;
-    }
-
-    .btnSec1{
+    
+    .maleModel{
+        margin-top: 0;
         
     }
-
-    .sec1Img{
-        margin: 0;
-        width: 100%;
-        display: block;
+    .femaleModel{
+        margin: 15px 0;
     }
 
-    .modelImg2{
-        justify-items: center;
-        margin: 0 auto;
-    }
-}
-
-// First Section Styling Ends
-
-// Section Two
-
-.sectwo{
-    h4{
-        font-family: "Jost-Bold", Helvetica;
-        font-weight: 700;
-        color: #212121;
-        font-size: 33.3px;
-        text-align: center;
-        margin: 50px 50px;
-    }
-}
-
-.imgSectwo{
-    
-    h5{
-        font-family: "Jost-SemiBold", Helvetica;
-        font-weight: 600;
-        color: #212121;
-        font-size: 20px;
-        margin-top: 30px;
-    }
-
-    p{
-        font-family: "Jost-Regular", Helvetica;
-        font-weight: 400;
-        color: #212121;
-        font-size: 13px;
-    }
-
- 
-
-
-}
-
-.viewAllBtn{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 70px 0;
-    font-weight: bold;
-    
-    button{
-        background: none;
-        outline: none;
-        border: 2px solid;
-        padding: 10px 80px;
-        color: black
-    
-    }
-     
-}
-
-// Section Two End
-
-// Section Three
-
-.contentSec{
-   padding: 125px 120px;
-    background-color: #f1f1f1;
-
-    h5{
-        color: var(--gray-800, #616161);
-        font-family: Jost;
-        font-size: 33.52px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal; 
-    }
-
-    p{
-        color: var(--gray-900, #424242);
-        font-family: Lato;
-        font-size: 13px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%;
-    }
-}
-#byc-collection{
-    color: var(--gray-1000, #212121);
-    font-family: Jost;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.exploreBtn{
-    
-    margin: 50px 0;
-    
-    button{
-        background: none;
-        outline: none;
-        border: 2px solid;
-        padding: 10px 60px;
-        color: black
-    }
-     
-}
-
-@include breakpoint(mobile){
-
-    * {
-        box-sizing: border-box;
-        
-      }
-      
-    br{
-        display: none;
-    }
-
-  .contentSec, .threebIMG{
-    margin-bottom: 10px;
-  }
-}
-// Section Three End
-
-
-// Content before card section 
-
-.hover1{
-    a:hover{
-        list-style:lower-roman;
-        
+    .learn-more-btn{
+        margin-top: 20px;
         
     }
+
+    .shop-now-btn{
+        margin-right: 0;
+    }   
+    
 }
 
-.hover2{
-    margin-top: 40px;
-    a{
-        border: 2px gainsboro solid;
-        padding: 10px;
-    }
-  
-    a:hover{
-        background-color: red;
-        color: white; 
+@include breakpoint(tablet){
+    .image-section-trio{
        
-        padding: 15px;
-    }
-}
-
-.catSection{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-   h3{
-    color: var(--gray-1000, #212121);
-    font-family: Jost;
-    font-size: 39px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 40px;
-   }
-    ul{
-        list-style: none;
-        display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-       
-  
-       a{
-        text-decoration: none;
-        color: black;
-        color: var(--Gray-1, #333);
-        font-family: Jost;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-       }
+}
     }
-}
 
-// card section
 
-.cardContent{
-    p{
-        color: gray;
-        font-family: Segoe UI;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin: 20px 0 5px;
-    }
-}
+// First Section Styling Ends---------------------------------------------------------------------------------------------------------------
 
-#womenPants{
-    font-weight: 700;
-    color: black;
-}
-
-// Blog New
-
-.blogNews{
- 
-    h5{
-        color: #212121;
+// Second Section--------------------------------------------------------------------------------------------------------------------------
+.byc-new-arrivals{
+    h4{
+        text-align: center;
+        margin: 50px 0;
+        color: var(--gray-1000, #212121);
         font-family: Jost;
-        font-size: 33.52px;
+        font-size: 33.271px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
-        text-align: center;
-        margin-bottom: 85px;
-       
+        
     }
 
+
+}
+// Second Section End--------------------------------------------------------------------------------------------------------------------------
+
+// Third Section----------------------------------------------------------------------------------------------------------------------------
+.third-section-text {
+    // background-color: #F1F1F1;
+    background: url(../images/HomePage/Rectangle\ 27.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 140px 0;
+
+    h3 {
+        color: #616161;
+        font-weight: 700;
+        font-size: 25px;
+        margin-left: 50px;
+      }
+
+      h1 {
+        font-weight: 700;
+        margin: 15px 0;
+        margin-left: 50px;
+      }
+
+      p {
+        margin-bottom: 60px;
+        color: #424242;
+        margin-top: 20px;
+        margin-left: 50px;
+      }
+  }
+
+
+  .explore-btn {
+    border: 1px solid black;
+    outline: none;
+    padding: 9px 60px;
+    font-weight: 700;
+    margin-left: 50px;
+  }
+@include breakpoint(mobile){
+   .third-section-text{
+    margin-bottom: 20px;
+    // padding: 140px 0;
+   }
+   br{
+    display: none;
+   }
 }
 
-.newsSection{
+@media screen and (max-width: 992px) {
+    .third-section-text {
+     margin-bottom: 20px;
+    }
 
-    // background-color: rgba(255, 255, 255, 1);
-    padding: 40px;
-    width: fit-content;
+    br {
+      display: none;
+    }
+  }
 
-    img{
-        margin: 20px 0;
-    }  
+// Third Section End----------------------------------------------------------------------------------------------------------------------------
+
+// Fourt Section-----------------------------------------------------------------------------------------------------------------------------
+.male-female-img{
+    margin-top: 25px !important;
+}
+@include breakpoint(mobile){
+    .female-img{
+        margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 992px){
+    .female-img{
+        margin-bottom: 20px;
+    }
+  }
+
+// Fourt Section End-----------------------------------------------------------------------------------------------------------------------------
+
+// Fifth Section-----------------------------------------------------------------------------------------------------------------------------
+.shop-by-category{
+    text-align: center;
+
+    h3{
+        color: var(--gray-1000, #212121);
+        font-family: Jost;
+        font-size: 39px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+.button1{
+  
+  
+    // justify-content: center;
+    margin: 50px 0;
+    button{
+        border: 0;
+        background-color: white;
+        color: var(--Gray-1, #333);
+        font-family: Jost;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    button:hover{
+       color: #828282;
+       padding-bottom: 10px;
+       border-bottom: 2px solid
+      
+    }
+}
+
+.button2{
+  
+  
+    // justify-content: center;
+    margin: 50px 0;
+    button{
+        border: 2px solid #F5F5F5;
+        padding: 5px 10px;
+        background-color: white;
+        color: var(--Gray-1, #333);
+        font-family: Jost;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+       
+    
+    }
+
+    button:hover{
+       color: white;
+       background-color: red;
+      
+      
+      
+    }
+}
+
+@include breakpoint(mobile){
+    .button1{
+        .for-men{
+            margin: 0 5px !important;
+        }
+    }
+   
+
+    .button2{
+        button{
+            display: inline-block;
+            width: 80%;
+            padding: 2px 2px;
+            
+            
+        }
+
+        .pants, .signlet{
+            margin: 15px 0 !important;
+            
+        }
+    } 
+}
+
+// Fifth Section End-----------------------------------------------------------------------------------------------------------------------------
+
+// Sixth Section Starts-----------------------------------------------------------------------------------------------------------------------
+.sixth-sec{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 
     p{
+        color: var(--Dark-Color, rgba(0, 0, 0, 0.87));
+        font-family: Josefin Sans !important;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.left-arrow {
+    margin-left: -7%;
+    margin-bottom: -35%;
+  }
+  .right-arrow {
+    margin-left: 100%;
+    margin-top: -40%;
+  }
+
+  .women-pants{
+    color: var(--gray-100, #19191D);
+    font-family: Segoe UI !important;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 25px 0 9px;
+    span{ 
+        font-weight: 700;
+      
+    }
+  }
+  @include breakpoint(mobile){
+
+    .read-more-button{
+        margin-bottom: 40px !important;
+    }
+    .sixth-sec{
+        display: block;
+        img{
+            width: 100%;
+        }
+      
+    }
+    .left-arrow{
+        display: none;
+    }
+
+    .right-arrow{
+        display: none;
+    }
+  }
+// Sixth Section Ends------------------------------------------------------------------------------------------------------------------------
+// Seventh Blog News------------------------------------------------------------------------------------------------------------------------
+.blog-heading{
+    color: #212121;
+    font-family: Jost;
+    font-size: 33.52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.blog-content{
+    background: var(--theme-white, #FFF);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    img, h6,.write-up,.read-more-button{
+        margin: 30px 40px 10px;
+    }
+
+    p, h6{
+        margin-left: 40px;
         color: var(--gray-900, #424242);
         font-family: Jost;
         font-size: 13.701px;
@@ -389,64 +457,104 @@ body{
 
         span{
             font-weight: 400;
-            margin-left: 20px;
+            margin-left: 30px;
         }
+        
     }
-
     h6{
         color: var(--gray-1000, #212121);
-        font-family: Jost;
-        font-size: 26.545px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 120%; 
-        margin: 35px 0;
+        font-size: 20px;     
+        line-height: 120%;
     }
-   
-    #innerContent{
-        color: var(--gray-900, #424242);
-        font-family: Lato;
-        font-size: 13.701px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 140%;
-        
-    }
-
 }
-
-.readMoreBtn{
-
-    margin-top: 40px;
-    padding-bottom: 80px;
-    font-size: 13.701px;
-    font-style: normal;
-    font-weight: 7000;
-    line-height: normal
-
-    button{
-        
-        outline: none;
-        border: 2px solid;
-           
-        
-    }
-
-
-}
-
-#btnStyle{
+.write-up{
     color: var(--gray-900, #424242);
-    font-family: Jost;
-    font-size: 13.701px;
+    font-family: Lato;
+    font-size: 12px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 2px 10px;
+    font-weight: 400;
+    line-height: 170%; /* 19.181px */
+}
 
-    img{
-        margin-left: 20px;
+.read-more-button{
+    padding: 10px;
+    background-color: #FFF;
+    
+   
+
+}
+
+.middle-card {
+    margin: 0 -25px; /* Adjust the margin as needed to control the gap */
+}
+
+@include breakpoint(mobile){
+    .middle-card{
+        margin: 20px 0;
+       
+    }
+    
+}
+
+@include breakpoint(tablet){
+    .middle-card{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+
+// Seventh Blog News Ends----------------------------------------------------------------------------------------------------------------------
+
+// Footer----------------------------------------------------------------------------------------------------------------------
+.footer{
+    background: #212121;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    a{
+        color: #FFF;
     }
 }
-// Home Page End
+.payment-method-logo{
+    display: flex;
+    gap: 15px;
+    
+}
+.styled-input {
+    color: #FFF;
+    background-color: transparent;
+    border: 0.1px solid #FFF;
+    padding: 10px 120px 10px 10px;
+    margin: 20px 0;
+  }
+  
+  input::placeholder {
+    color: #FFF; 
+    font-family: Jost;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
 
+  @include breakpoint(mobile){
+    .left-item{
+        text-align: center;
+       
+    }
+
+    .payment-method-logo{
+        display: block;
+    }
+  }
+
+// Footer Ends----------------------------------------------------------------------------------------------------------------------
+
+  
